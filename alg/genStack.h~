@@ -1,0 +1,9 @@
+#ifndef STACK
+#define STACK
+#include <vector>
+
+template<class T, int capacity = 30>
+class Stack {
+	
+}
+#endif

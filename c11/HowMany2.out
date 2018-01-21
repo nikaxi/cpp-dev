@@ -1,0 +1,18 @@
+HowMany2(): 	h: objCount = 1
+Entering f()
+HowMany2(const Howmany2& ): 	h copy: objCount = 2
+x argument inside f(): 	h copy: objCount = 2
+Returning from f()
+HowMany2(const Howmany2& ): 	h copy copy: objCount = 3
+~HowMany(): 	h copy: objCount = 2
+h2 after call to f(): 	h copy copy: objCount = 2
+Call f(), no return value
+HowMany2(const Howmany2& ): 	h copy: objCount = 3
+x argument inside f(): 	h copy: objCount = 3
+Returning from f()
+HowMany2(const Howmany2& ): 	h copy copy: objCount = 4
+~HowMany(): 	h copy copy: objCount = 3
+~HowMany(): 	h copy: objCount = 2
+After call f() 
+~HowMany(): 	h copy copy: objCount = 1
+~HowMany(): 	h: objCount = 0

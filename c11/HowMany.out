@@ -1,0 +1,4 @@
+after construction of h: objCount = 1
+x argument inside f(): objCount = 1
+after call f(): objCount = 1
+~HowMany(): objCount = 0

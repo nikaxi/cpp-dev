@@ -1,0 +1,53 @@
+#include <iostream>
+#include <cstring>
+#include <iostream>
+
+using namespace std;
+#define M 100;
+char sa[1000];
+char sb[1000];
+
+typedef struct _Node {
+	int s[M];
+	int l; // 字符串长度
+	int c; // 次幂
+} Node, *pNode;
+
+void cp (pNode src, pNode des, int st, int l) {
+	int i, j;
+	for(i=st, j= 0; i<st+l; j++, i++) {
+		des->s[j] = src->s[i];
+	}
+	des->l = l;
+	des->c = st + src->c; // 次幂
+}
+
+void add(pNode pa, pNode, pb, pNode ans) {
+	int i, cc, k, palen, pblen, len;
+	int ta, tb;
+	pNode temp;
+	// a的次幂要大于b的次幂
+	if (pa->c < pb->c) {
+		temp = pa;
+		pa = pb;
+		pb = pa;
+	}
+
+	ans->c = pb->c;
+	cc = 0;
+	palen = pa->l + pa->c;
+	pblen = pb->l + pb->c;
+	if (palen > pblen)
+		len = palen;
+	else
+		len = pblen;
+
+	// 次幂的差
+	k = pa->c - pb->c;
+	for (int i=0; i < len-ans->c; i++) {
+		if (i < k) 
+			ta = 0;
+		else
+			ta = pa->s[i-k];
+	}
+}

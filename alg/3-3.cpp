@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+
+int Partition(int R[], int low, int high) {
+	int pivot = R[low];
+	int i = low;
+	int j = high;
+	//从右向左走
+	while(i < j) {
+		while(R[j] > pivot) j--;
+		if (i < j) {
+			int tmp = R[i];
+			R[i] = R[j];
+			R[j] = tmp;
+		}
+		while(R[i] < pivot) i++;
+		if (i < j) {
+			int tmp = R[i];
+			R[i] = R[j];
+			R[j] = tmp;
+		}
+	}
+	cout << i << endl;;
+	return i;
+}
+
+
+void QuickSort(int R[], int low, int high) {
+	int mid;
+	if (low < high) {
+		mid = Partition(R, low, high);
+		QuickSort(R, low, mid-1);
+		QuickSort(R, mid+1, high);
+	}
+}
+
+
+int main() {
+	int a[1000];
+	int i, N;
+	cout << "请先输入要排序的数据的个数:";
+	cin >> N;
+	cout << "请输入要排序的数据:"<<endl;
+	for(int i=0; i<N; i++) {
+		cin >> a[i];
+	}
+
+	cout << endl;
+	QuickSort(a, 0, N-1);
+	cout << "排序后:" << endl;
+	for(int i=0; i<N; i++) {
+		cout << a[i] << " ";
+	}
+	cout << endl;
+	return 0;
+}
+
