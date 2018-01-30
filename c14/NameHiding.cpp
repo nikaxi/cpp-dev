@@ -49,6 +49,7 @@ int main() {
     string s("hello");
     Derived1 d1;
     int x = d1.f();
+    d1.f("hi");
     Derived2 d2;
     x = d2.f();
     Derived3 d3;

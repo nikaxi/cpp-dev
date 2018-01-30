@@ -1,0 +1,11 @@
+list结构
+book  书籍对象
+    书名字
+    next
+    pre
+author 书籍作者  包括了book数组，数组元素指向book元素
+    书籍作者 
+checkedout 被借出去的书籍
+patron 借书人
+catalog 作者分类分类 首字母不分大小写   
+people  借书人的数组
