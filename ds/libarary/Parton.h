@@ -6,7 +6,7 @@
 
 class Parton {
     std::string name;
-    std::list<Book*> books;
+    std::list<Book> books;
     public:
     Parton(std::string _name):name(_name) {}
     void add(const Book&);

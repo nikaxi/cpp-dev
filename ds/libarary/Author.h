@@ -5,8 +5,8 @@
 #include <string>
 class Author {
     std::string name;
-    std::list<Book*> books;
+    std::list<Book> books;
     public:
-    void add(Book&);
+    void add(const Book&);
 };
 #endif

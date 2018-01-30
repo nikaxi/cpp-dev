@@ -1,6 +1,6 @@
 #include "Author.h"
 #include "Book.h"
 
-void Author::add(Book& b) {
-    books.push_back(&b);
+void Author::add(const Book& b) {
+    books.push_back(b);
 }
